@@ -1,0 +1,537 @@
+/* Font Akaya Telivigala */
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --primaryColor: #0AB39C;
+    --secondaryColor: #DAF4F0;
+    --sectionBackgroundColor: #F3F3F9;
+    --whiteColor: #fff;
+    --blackColor: #000;
+    --selfShadow: 0px 0px 5px #cccccc;
+    --mainFont: "Akaya Telivigala";
+    --paragraphFont: "Outfit";
+    --greyColor: #acacac;
+}
+
+* {
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Outfit";
+}
+
+body {
+    margin: 0;
+    background-color: var(--sectionBackgroundColor);
+}
+
+/* Links Style */
+a {
+    text-decoration: none;
+    transition: all .1;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Assignment-2-4 */
+
+/* container */
+.editApps {
+    width: 100%;
+    padding: 20px;
+    height: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+}
+
+/* apps div  */
+.editApps div {
+    background-color: var(--whiteColor);
+    width: calc(100% / 3);
+    height: 100%;
+    box-shadow: var(--selfShadow);
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.editApps div:nth-child(2) {
+    align-items: center;
+    text-align: center;
+}
+
+.editApps div:nth-child(3) {
+    align-items: end;
+    text-align: right;
+}
+
+/* apps paragraphs  */
+.editApps div p {
+    color: var(--greyColor);
+    font-family: var(--paragraphFont);
+    font-size: .9em;
+    margin: 0;
+}
+
+/* apps headers  */
+.editApps div h3 {
+    font-family: var(--mainFont);
+    margin: 0;
+}
+
+/* apps icons  */
+.editApps div i {
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    width: 45px;
+    height: 48px;
+    padding: 14px;
+    border-radius: 5px;
+    align-content: center;
+}
+
+/* apps buttons  */
+.editApps div button {
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    box-shadow: inset 0px 0px 6px 2px var(--secondaryColor);
+}
+
+/* ================================= */
+/* Assignment-2-5 Employees Cards */
+
+/* container */
+.employeesCards {
+    width: 100%;
+    padding: 20px;
+    height: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+/* Cards divs */
+.employeesCards>div {
+    background-color: var(--whiteColor);
+    width: calc(100% / 3);
+    height: 100%;
+    box-shadow: var(--selfShadow);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Titles */
+.employeesCards h3 {
+    margin: 11px 0px;
+    font-weight: 400;
+}
+
+.employeesCards h4 {
+    margin: 0;
+    color: var(--greyColor);
+    font-weight: 300;
+    font-family: var(--mainFont);
+}
+
+/* Cards Headers */
+.employeesCards .cardHeader {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--greyColor);
+}
+
+/* Cards Contents */
+.employeesCards .cardContent {
+    width: 100%;
+    height: 13em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--greyColor);
+}
+
+.employeesCards .cardContent img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-bottom: .6em;
+}
+
+/* Cards Footers */
+.employeesCards .cardFooter {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+}
+
+.employeesCards .cardFooter i {
+    margin: 11px 0px;
+}
+
+.fa-facebook {
+    color: rgb(7, 50, 105);
+}
+
+.fa-instagram {
+    color: firebrick;
+}
+
+.fa-linkedin {
+    color: blue;
+}
+
+.fa-envelope {
+    color: red;
+}
+
+/* ================================= */
+/* Assignment-2-6 Details Image */
+
+/* container */
+.detailsImage {
+    height: 400px;
+    max-width: 100%;
+    margin: 1%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+
+}
+
+/* Section Background */
+.detailsImage img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: all .2s ease-in-out;
+}
+
+/* Hover for reading */
+.detailsImage:hover img {
+    filter: blur(2px);
+    zoom: 180%;
+}
+
+/* Section Texts */
+
+.detailsImage p {
+    position: absolute;
+    color: var(--whiteColor);
+    line-height: 25px;
+}
+
+.detailsImage p:nth-of-type(1) {
+    top: 0;
+    margin: 0;
+    padding: 5% 5%;
+    border-bottom: 1px solid #cccccc63;
+    width: 100%;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.detailsImage p:nth-of-type(2) {
+    top: 20%;
+    margin: 0;
+    padding: 5% 5%;
+    width: 100%;
+}
+
+.detailsImage p:nth-of-type(3) {
+    bottom: 1%;
+    margin: 0;
+    padding: 5% 5%;
+    width: 100%;
+    border-top: 1px solid #cccccc63;
+    text-align: center;
+}
+
+/* ================================= */
+/* Assignment-2-(7,8,9,10) Blog login & Posts */
+
+/* container */
+.blogLogin {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+}
+
+/* Posts and Login Containers */
+.blogLogin>div {
+    background-color: var(--whiteColor);
+    width: calc(100% / 3);
+    height: auto;
+    box-shadow: var(--selfShadow);
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+/* post images */
+.pcBlogPost img,
+.techBlogPost img {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+/* post text header and footer */
+.pcBlogPost h3,
+.techBlogPost h3 {
+    margin: 0;
+    padding: 15px;
+    border-bottom: 1px solid #cccccc63;
+
+}
+
+.pcBlogPost h5,
+.techBlogPost h5 {
+    margin: 0;
+    padding: 15px;
+    border-top: 1px solid #cccccc63;
+
+}
+
+/* Posts Desc */
+.blogLogin .pcBlogPost p,
+.techBlogPost p {
+    margin: 0;
+    color: var(--greyColor);
+    padding: 15px;
+    width: 100%;
+    height: 40%;
+    font-size: 1em;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Login Form */
+.loginForm {
+    align-items: center;
+    justify-content: end;
+}
+
+.loginForm .formHeader,
+.formFooter {
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    align-content: center;
+}
+
+.loginForm .formHeader h3 {
+    margin: 2%;
+    color: var(--primaryColor);
+}
+
+.loginForm .formHeader h5,
+.formFooter h5 {
+    margin: 0;
+    color: var(--greyColor);
+    font-weight: 300;
+}
+
+.loginForm form {
+    width: 100%;
+    height: 80%;
+    align-content: center;
+    padding: 0 10px;
+}
+
+.loginForm form input:not([type="checkbox"]) {
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    padding: 2%;
+}
+
+.passWordContainer {
+    position: relative;
+}
+
+.passWordContainer .fa-eye {
+    position: absolute;
+    right: 3%;
+    top: 46%;
+    color: var(--primaryColor);
+}
+
+.loginForm form input:focus {
+    border: 2px solid var(--primaryColor);
+    outline: none;
+}
+
+.loginForm form input[type="submit"] {
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 5%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+
+input[type="submit"]:hover {
+    box-shadow: inset 0px 0px 6px 2px var(--secondaryColor);
+}
+
+
+.formFooter .otherSigninIcons {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+.fa-x-twitter {
+    color: black;
+}
+
+.otherSigninIcons i {
+    scale: 140%;
+}
+
+/* Home Posts */
+
+.homePosts {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.homePosts>div {
+    background-color: var(--whiteColor);
+    width: calc(99% / 2);
+    height: 200px;
+    box-shadow: var(--selfShadow);
+    border-radius: 5px;
+    margin-bottom: 1%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.homePosts img {
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .15s ease-in-out;
+}
+
+.homePosts img:hover{
+    scale: 104%;
+}
+
+.textPostContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.textPostContainer p {
+    margin: 0;
+    color: var(--greyColor);
+    padding: 0 3%;
+    width: 100%;
+    height: 50%;
+    font-size: 1em;
+    overflow: hidden;
+
+}
+
+.textPostContainer h5 {
+    margin: 0;
+    padding: 3%;
+    color: var(--greyColor);
+    font-weight: 300;
+    border-top: 1px solid #cccccc63;
+
+}
+
+.textPostContainer h3 {
+    padding: 3%;
+    margin: 0;
+    border-bottom: 1px solid #cccccc63;
+    overflow: hidden;
+}
+
+@media (max-width:600px) {
+
+    .employeesCards,
+    .editApps,
+    .blogLogin,
+    .homePosts {
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+
+    .editApps>div,
+    .employeesCards>div,
+    .blogLogin>div,
+    .homePosts>div {
+        width: 100%;
+        margin: 1% 0;
+        align-items: center;
+    }
+
+    .tailwindBootstrap,
+    .learnReact {
+        direction: rtl;
+        text-align: left;
+    }
+
+    .editApps div:nth-child(3) {
+        align-items: center;
+    }
+
+
+}

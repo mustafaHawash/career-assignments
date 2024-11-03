@@ -1,0 +1,239 @@
+* {
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Outfit";
+}
+
+
+/* ============================
+Using Flex */
+
+/*
+body{
+    margin: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+    direction: rtl;
+}
+
+header {
+    width: 100%;
+    height: 20vh;
+    background-color: #99D9EA;
+    border: 2px solid black;
+}
+
+section {
+    width: 100%;
+    min-height: 70vh;
+    background-color: #FFFFFF;
+    border: 2px solid black;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 1%;
+}
+
+section aside {
+    background-color: #FFF200;
+    width: 30%;
+    border: 2px solid black;
+    margin-left: 2%;
+}
+
+section .mainContentContainer{
+    width: 70%;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    gap: 1%;
+}
+
+.mainContentContainer .post, .description {
+    background-color: #B97A57;
+    width: calc(99%/2);
+    border: 2px solid black;
+    height: 65%;
+}
+
+.mainContentContainer .comments{
+    background-color: #C3C3C3;
+    width: 100%;
+    height: 20%;
+    border: 2px solid black;
+}
+
+footer {
+    width: 100%;
+    height: 10vh;
+    background-color: #FFAEC9;
+    border: 2px solid black;
+} */
+
+/* =================================
+Using Float */
+
+/* body{
+    margin: 0;
+    min-height: 100vh;
+    direction: rtl;
+
+}
+
+.clear{
+    clear: both;
+}
+
+header {
+    width: 100%;
+    min-height: 20vh;
+    background-color: #99D9EA;
+    border: 2px solid black;
+    float: right;
+}
+
+section {
+    width: 100%;
+    min-height: 70vh;
+    background-color: #FFFFFF;
+    border: 2px solid black;
+    float: right;
+    padding: 1%;
+}
+
+section aside {
+    background-color: #FFF200;
+    width: 30%;
+    height: 38em;
+    border: 2px solid black;
+    float: right;
+    margin-left: 2%;
+}
+
+section .mainContentContainer{
+    width: 68%;
+    float: right;
+    height: 38em;
+    padding-bottom: 4%;
+}
+
+.mainContentContainer .post, .description {
+    background-color: #B97A57;
+    width: calc(96%/2);
+    border: 2px solid black;
+    height: 70%;
+    float: right;
+    margin: 0 1%;
+}
+
+
+.mainContentContainer .comments{
+    background-color: #C3C3C3;
+    width: 98%;
+    height: 28%;
+    border: 2px solid black;
+    float: right;
+    margin: 1%;
+}
+
+footer {
+    width: 100%;
+    height: 10vh;
+    background-color: #FFAEC9;
+    border: 2px solid black;
+    float: right;
+} */
+
+/* =================================
+Using Grid */
+
+body {
+    margin: 0;
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 10% auto 10%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "header header header header header header"
+        "content content content content content content"
+        "footer footer footer footer footer footer";
+    direction: rtl;
+}
+
+header {
+    width: 100%;
+    background-color: #99D9EA;
+    border: 2px solid black;
+    grid-area: header;
+}
+
+section {
+    width: 100%;
+    background-color: #FFFFFF;
+    border: 2px solid black;
+    grid-area: content;
+    padding: 1%;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "aside aside aside post post post desc desc desc"
+        "aside aside aside post post post desc desc desc"
+        "aside aside aside comment comment comment comment comment comment";
+    gap: 1%;
+
+}
+
+section aside {
+    background-color: #FFF200;
+    border: 2px solid black;
+    grid-area: aside;
+}
+
+
+section .post {
+    background-color: #B97A57;
+    border: 2px solid black;
+    grid-area: post;
+}
+
+section .description {
+    background-color: #B97A57;
+    border: 2px solid black;
+    grid-area: desc;
+}
+
+section .comments {
+    background-color: #C3C3C3;
+    border: 2px solid black;
+    grid-area: comment;
+    margin-bottom: 5%;
+}
+
+footer {
+    width: 100%;
+    background-color: #FFAEC9;
+    border: 2px solid black;
+    grid-area: footer;
+}
+
+
+/* media applied on display flex Only*/
+/* @media (max-width:600px){
+    body, aside, section {
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 1%;
+    }
+
+    section aside{
+        width: 100%;
+        margin: 0;
+    }
+
+    section .mainContentContainer{
+        width: 100%;
+        margin: 0;
+    }
+} */
