@@ -1,0 +1,7 @@
+- need to have these designs at html & css  	Done
+- no need to do it with flex			Done Only Float & Clear
+- no need to have icons 			Done
+
+(((Deadline : 22-10-2024  next lecture)))	Finished 23-10 
+
+Thanks..
